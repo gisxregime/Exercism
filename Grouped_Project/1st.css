@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(247, 244, 244) !important;
+    min-width: 100vw;
+    min-height: 100vh; /* this makes the body fill the full screen height */
+    overflow-x: hidden;/* this is for the slide bar width below*/
+    
+}
+
+/* Navbar */
+.nav-header {
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 30px rgba(7, 7, 7, 0.3);
+    padding: 2rem 2rem;
+    backdrop-filter: blur(10px);  
+}
+
+.nav-header .container-fluid {
+    margin-left: 50px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.navbar-logo {  
+    height: 50px;
+    width: auto;
+}
+.navbar-collapse {
+    gap: 1px; /* adjust this value so that the nav-link will get closer to the search bar*/
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    font-family: "Titillium Web" , sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: inherit;
+    font-size: 1rem;
+    margin: 0;
+    margin-right: 25px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+/* Text color on hover */
+.navbar-nav .nav-link:hover {
+    color: #bcc4d4 !important;
+}
+
+/* Underline ONLY on Home and About Us — NOT Shop */
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgb(107, 105, 105);
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+/* Show underline on hover */
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+    width: 93%;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    font-family: "Titillium Web" ,sans-serif;
+    background: black !important;                           /* ← Black background */
+    border: 2px solid #646466;                  /* ← Purple border */
+    border-radius: 1px !important;
+    padding: 15px;
+    box-shadow: 0 10px 40px rgba(76, 0, 255, 0.5);
+    min-width: 350px;
+    margin-top: 30px !important;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    background: black !important;
+    color: rgb(163, 162, 162) !important;          /* ← White text on black */
+    font-weight: 500;
+    font-size: auto;
+    padding: 15px 20px;
+    border-radius: 1px;
+    border: none;              /* ← Invisible border by default */
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: rgb(49, 49, 53) !important;          
+    color: #bbbdbe !important;                            
+    transform: translateX(5px);
+                 
+}
+
+.dropdown-item + .dropdown-item {
+    border-top: 3px solid #e9e3e3 !important;  /* ← Thick light gray */
+}
+.search-container-4 {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 30px;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.search-input-4 {
+    border: none;
+    outline: none;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 10px;
+    font-size: 1.05rem;
+    width: 100%;
+    background: transparent;
+    font-family: "Titillium Web" , sans-serif;
+    font-weight: 30px;
+    
+}
+
+.search-input-4::placeholder {
+    color: gray;
+}
+
+.search-icon-4 {
+    color: gray;
+    font-size: 1.3rem;
+    cursor: pointer;
+    min-width: 20px;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.cart-icon:hover {
+    color: #f0742c;
+    transform: translateY(-2px);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.profile-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #cccccc;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #666;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    border-color: #0565da;
+    background: #aaaaaa;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+/* End of navigation CSS */
+
+/* Start for the main body*/
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+    background: rgb(170, 170, 170);
+    display: flex; /* you can just remove this if you want unto align-items as well*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+            
+}
+
+.box2 {
+    width: 100%;
+    height: 100vh;
+    background: rgb(212, 212, 212);
+    border-bottom-right-radius: 550px;
+    border-top-left-radius: 550px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+        }
+
+.box3 {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    border-bottom-right-radius: 800px;
+    border-top-left-radius: 800px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* css for picture in the right */
+.main-content .paint-img {
+   position: absolute;
+   top: 1%;
+   right: 75%;
+   width: 580px;
+   height: 680px;
+}
+
+/* Centered Text */
+#your{
+    font-family: "Titillium Web" ,sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.trusted {
+    background: linear-gradient(90deg, 
+        #4c00ff,  /* Purple */
+        #0327f5,  /* Blue */
+        #00b7ff,  /* Cyan */
+        #11c511,  /* Green */
+        #cece08,  /* Yellow */
+        #fc1504,  /* Red */
+        #cd0adf   /* Pink */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "Titillium Web" , sans-serif;
+
+}
+.center-text .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Titillium Web" ,sans-serif;
+    color: black;
+
+}
+
+.center-text .years {
+    font-family: "Titillium Web" ,sans-serif;
+    font-size: 42px;;
+    line-height: 0;
+    color: #0327f5;
+    font-weight: bold;
+}
+.center-text .years-text {
+    font-family: "Titillium Web" , sans-serif;
+    font-size: 27px;
+    color: black;
+    font-weight: bold;
+}
+
+.center-text {
+    padding-right: 270px;
+    padding-bottom: 100px;
+}
+/* left pic */
+.main-content .paint-imgs {
+   position: absolute;
+   top: 0%;
+   left: 76%;
+   width: 600px;
+   height: 670px;
+   margin-top: -100px;
+}
+
+.main-content .printer-img {
+   position: absolute;
+   top: 10%;
+   left: 61%;
+   width: 580px;
+   height: 500px; 
+}
+
+.main-content .carousel-label {
+    font-family: "Titillium Web" ,sans-serif;
+    position: absolute;
+    font-weight: initial;
+    font-size: 22px;
+    top: 70%;
+    left: 74%;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content-top {
+    width: 100%;
+    height: 50vh;
+    background: white;
+    display: flex;
+}
+
+.content-bottom {
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    display: flex;
+}
