@@ -210,13 +210,13 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(4, 120, 87, 0.4);
 }
-
+/* 2 Page */
 .section-wrapper {
     padding: 50px 20px 30px;
     text-align: center;
-    height: 60vh;
+    height: 40vh;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 18px;
 }
 
 .section-title {
@@ -277,4 +277,185 @@ body {
     font-size: 13px;
     color: #9ca3af;
     margin-top: 18px;
+}
+/* 3 Page */
+/* ── Meet Our Giyas Section ── */
+.giyas-wrapper {
+    background: rgb(253, 238, 211);
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.giyas-header {
+    margin-bottom: 40px;
+}
+
+.giyas-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.giyas-title-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, rgba(245, 158, 11, 1), rgba(59, 130, 246, 1));
+    border-radius: 20px;
+    margin: 6px auto 10px;
+}
+
+.giyas-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Grid */
+.giyas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card */
+.giya-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.giya-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.giya-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.giya-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.giya-card:hover .giya-img {
+    transform: scale(1.05);
+}
+
+.giya-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 14px;
+    background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+.giya-specialty-tag {
+    font-size: 10px;
+    color: rgba(245, 158, 11, 1);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.giya-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+/* Info */
+.giya-info {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+.giya-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.giya-location {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.giya-rating {
+    font-size: 13px;
+    font-weight: 600;
+    color: #f59e0b;
+}
+
+.giya-tag {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #047857;
+    border: 1px solid #bbf7d0;
+    border-radius: 999px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.giya-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 10px;
+}
+
+.giya-reviews {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.giya-profile {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e3a8a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.giya-profile:hover {
+    color: #f59e0b;
+}
+
+/* View All Button */
+.giyas-view-all {
+    margin-top: 40px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-view-all:hover {
+    background: #f59e0b;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
