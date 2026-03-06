@@ -298,9 +298,9 @@ body {
 }
 
 .giyas-title-line {
-    width: 60px;
+    width: 250px;
     height: 3px;
-    background: linear-gradient(to right, rgba(245, 158, 11, 1), rgba(59, 130, 246, 1));
+    background: linear-gradient(to right, rgba(245, 158, 11, 1), rgba(16, 185, 129, 1), rgba(59, 130, 246, 1));
     border-radius: 20px;
     margin: 6px auto 10px;
 }
@@ -395,6 +395,11 @@ body {
 .giya-location {
     font-size: 13px;
     color: #6b7280;
+}
+
+.giya-location i {
+    color: #047857;
+    font-size: 12px;
 }
 
 .giya-rating {
