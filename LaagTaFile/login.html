@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaagTa - Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8ddd0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .signup-container {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px 35px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+
+        }
+
+        .logo1 {
+            height: 30px;
+            width: auto;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: rgba(30, 58, 138, 1);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .sign-in-link {
+            color: rgba(217, 119, 6, 1);
+            text-decoration: none;
+            font-weight: 500;
+            padding-left: 5px;
+        }
+
+        .sign-in-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Gradient Line */
+        .gradient-line {
+            height: 3px;
+            background: linear-gradient(to right, #fbbf24, #0d9488, #0d6efd);
+            margin: 20px 0 25px 0;
+            border-radius: 2px;
+        }
+
+        /* Role Selection */
+        .role-selection {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .role-option {
+            flex: 1;
+            padding: 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .role-option:hover {
+            border-color: #0d9488;
+            background: #f0fdf4;
+        }
+
+        .role-option.active {
+            border-color: #0d9488;
+            background: #f0fdf4;
+        }
+
+        .role-option i {
+            font-size: 32px;
+            color: #999;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .role-option.active i {
+            color: #0d9488;
+        }
+
+        .role-option p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .role-option.active p {
+            color: #0d9488;
+            font-weight: 600;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0d9488;
+            background: white;
+        }
+
+        .form-group input::placeholder {
+            color: #bbb;
+        }
+
+        /* Create Account Button */
+        .create-btn {
+            width: 100%;
+            padding: 14px;
+            background: #0d9488;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .create-btn:hover {
+            background: #0f766e;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+        }
+
+        .create-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .signup-container {
+                padding: 30px 25px;
+            }
+
+            .role-option {
+                padding: 15px;
+            }
+
+            .role-option i {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="PicsFolder/signinlogo.png" alt="Logo" class="logo1">
+                <h1>LaagTa</h1>
+            </div>
+            <h2>Join the LaagTa Family</h2>
+            <p>
+                Don't have an account? 
+                <a href="signin.html" class="sign-in-link">Sign Up</a>
+            </p>
+        </div>
+
+        <!-- Gradient Line -->
+        <div class="gradient-line"></div>
+
+        <!-- Role Selection -->
+        <div class="role-selection">
+            <div class="role-option" id="touristOption" onclick="selectRole('tourist')">
+                <i class="fas fa-user"></i>
+                <p>I'm a Tourist</p>
+            </div>
+            <div class="role-option active" id="guideOption" onclick="selectRole('guide')">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>I'm a Guide</p>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <form id="loginForm">
+            
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="Email" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="password" 
+                    required
+                >
+            </div>
+
+            <button type="submit" class="create-btn">Login Account</button>
+        </form>
+    </div>
+
+    <script>
+        let selectedRole = 'guide'; // Default selection
+
+        function selectRole(role) {
+            const touristOption = document.getElementById('touristOption');
+            const guideOption = document.getElementById('guideOption');
+
+            if (role === 'tourist') {
+                touristOption.classList.add('active');
+                guideOption.classList.remove('active');
+                selectedRole = 'tourist';
+            } else {
+                guideOption.classList.add('active');
+                touristOption.classList.remove('active');
+                selectedRole = 'guide';
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const userData = {
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                role: selectedRole
+            };
+
+            // Save to localStorage
+            localStorage.setItem('user_' + userData.email, JSON.stringify(userData));
+            
+            alert('Account created successfully as ' + (selectedRole === 'guide' ? 'Guide' : 'Tourist') + '!');
+            
+            // Redirect based on role
+            if (selectedRole === 'guide') {
+                window.location.href = 'guide-dashboard.html';
+            } else {
+                window.location.href = 'tourist-dashboard.html';
+            }
+        });
+    </script>
+
+</body>
+</html>
