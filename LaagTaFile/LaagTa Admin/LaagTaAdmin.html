@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+<link rel="stylesheet" href="LaagTaCSSadmin.css">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+<div class="row">
+
+<!-- SIDEBAR -->
+
+<div class="col-md-2 sidebar">
+
+<h2>{{system_name}}</h2>
+
+<ul>
+<li>Home</li>
+<li>Guides</li>
+<li>Client Reviews</li>
+<li>Explore</li>
+<li>About</li>
+<li>Bookings</li>
+<li>Tour Guides</li>
+<li>Tour Packages</li>
+<li>Customers</li>
+<li>Reviews</li>
+<li>Reports</li>
+<li>Settings</li>
+</ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="col-md-10 p-4">
+
+<!-- NAVBAR -->
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<input class="search" placeholder="Search {{search_type}}">
+
+<div class="d-flex gap-3 align-items-center">
+
+<span>{{notification_icon}}</span>
+
+<div class="profile">{{admin_initials}}</div>
+
+<span>{{logout_button}}</span>
+
+</div>
+
+</div>
+
+<!-- OVERVIEW -->
+
+<h3 class="mb-3" style="color: rgb(47, 47, 202);">Overview</h3>
+
+<div class="row g-3 mb-4">
+
+<div class="col-md-2">
+<div class="card-custom">
+<h4>Trips Booked ({{year}})</h4>
+<p>{{total_trips}}</p>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="card-custom">
+<h4>Tour Guides Booked</h4> 
+<p>{{total_guides_booked}}</p>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="card-custom">
+<h4>Saved Guides</h4>
+<p>{{saved_guides}}</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="graph">
+{{graph_placeholder}}
+</div>
+</div>
+
+</div>
+
+<!-- BOOKINGS -->
+
+<h4 class="mb-3" style="color: rgb(47, 47, 202);">Currently Booked Tours</h4>
+
+<div class="booking-card mb-3 d-flex justify-content-between align-items-center">
+
+<div class="booking-info">
+<strong>{{tour_name}}</strong><br>
+Guide: {{guide_name}} • {{booking_date}} • {{guest_count}} guests
+</div>
+
+<div>
+<button class="btn blue btn-sm">Change Guide</button>
+<button class="btn orange btn-sm">Details</button>
+<button class="btn red btn-sm">Cancel</button>
+</div>
+
+</div>
+
+<div class="booking-card mb-4 d-flex justify-content-between align-items-center">
+
+<div class="booking-info">
+<strong>{{tour_name}}</strong><br>
+Guide: {{guide_name}} • {{booking_date}} • {{guest_count}} guests
+</div>
+
+<div>
+<button class="btn blue btn-sm">Change Guide</button>
+<button class="btn orange btn-sm">Details</button>
+<button class="btn red btn-sm">Cancel</button>
+</div>
+
+</div>
+
+<!-- LOWER WIDGETS -->
+
+<div class="row g-3">
+
+<div class="col-md-6">
+
+<div class="widget">
+
+<h4 style="color: rgb(47, 47, 202);">Overall Service Rating</h4>
+
+<div class="rating">★ {{rating_value}} / 5.0</div>
+
+<p style="font-size:12px;margin-top:10px; color: rgb(47, 47, 202);">Read Reviews →</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="widget">
+
+<h4 style="color: rgb(47, 47, 202);" >Booking Status (This Year)</h4>
+
+<ul class="status">
+<li>Pending: {{pending_count}}</li>
+<li>Confirmed: {{confirmed_count}}</li>
+<li>Completed: {{completed_count}}</li>
+<li>Cancelled: {{cancelled_count}}</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

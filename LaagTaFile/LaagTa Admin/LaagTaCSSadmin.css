@@ -1,0 +1,122 @@
+body{
+background:#f5f3ef;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+background:#ebe6dd;
+min-height:100vh;
+padding:20px;
+}
+
+.sidebar h2{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.sidebar ul{
+list-style:none;
+padding-left:0;
+}
+
+.sidebar li{
+padding:8px 0;
+font-size:14px;
+color:#555;
+cursor:pointer;
+}
+
+/* NAVBAR */
+
+.search{
+background:white;
+border-radius:20px;
+width:200px;
+border:1px solid #ddd;
+padding:6px 10px;
+}
+
+.profile{
+width:30px;
+height:30px;
+background:#2e7d32;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:12px;
+}
+
+/* CARDS */
+
+.card-custom{
+background:white;
+padding:15px;
+border-radius:8px;
+border:1px solid #e5e5e5;
+}
+
+.card-custom h4{
+font-size:12px;
+color:#777;
+margin-bottom:5px;
+}
+
+.card-custom p{
+font-size:20px;
+}
+
+/* GRAPH */
+
+.graph{
+background:white;
+border-radius:8px;
+border:1px solid #e5e5e5;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#999;
+}
+
+/* BOOKINGS */
+
+.booking-card{
+background:white;
+padding:15px;
+border-radius:8px;
+border:1px solid #e5e5e5;
+}
+
+.booking-info{
+font-size:13px;
+color:#555;
+}
+
+/* BUTTON COLORS */
+
+.blue{background:#e3f2fd;}
+.orange{background:#ffe0b2;}
+.red{background:#ffcdd2;}
+
+/* WIDGETS */
+
+.widget{
+background:white;
+padding:15px;
+border-radius:8px;
+border:1px solid #e5e5e5;
+}
+
+.rating{
+font-size:20px;
+color:#ff9800;
+}
+
+.status li{
+font-size:13px;
+margin-top:6px;
+}
